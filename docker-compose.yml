@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POOSTGRES_DB: postgres
+  app:
+    image: my-node-app
+    ports:
+      - "1338:1338"
