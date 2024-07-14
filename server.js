@@ -128,6 +128,69 @@ app.post('/motherboard', async (req, res) => {
     }
 });
 
+app.get('/cpu/setup', async (req, res) => {
+    try {
+        await pool.query('CREATE TABLE cpu (id SERIAL PRIMARY KEY, name VARCHAR(255), brand VARCHAR(255), description VARCHAR(2000), socket VARCHAR(255), cores VARCHAR(255), threads VARCHAR(255), baseclock VARCHAR(255), boostclock VARCHAR(255), tdp VARCHAR(255), integratedgraphics VARCHAR(255), photourl1 VARCHAR(1000), photourl2 VARCHAR(1000), photourl3 VARCHAR(1000), photourl4 VARCHAR(1000), photourl5 VARCHAR(1000), microcenterlink VARCHAR(1000), amazonlink VARCHAR(1000), newegglink VARCHAR(1000), bestbuylink VARCHAR(1000))');
+        res.status(200).send({message: "Succesfully created table"});
+    }
+    catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
+app.get('/cpu/teardown', async (req, res) => {
+    try {
+        await pool.query('DROP TABLE cpu');
+        res.status(200).send({message: "Succesfully dropped table"});
+    }
+    catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
+app.get('/cpu', async (req, res) => {
+    try {
+        const data = await pool.query('SELECT * FROM cpu');
+        res.status(200).send(data.rows);
+    } catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
+app.post('/cpu', async (req, res) => {
+    const { name,
+            brand,
+            description,
+            socket,
+            cores,
+            threads,
+            baseClock,
+            boostClock,
+            tdp,
+            integratedGraphics,
+            photoURL1,
+            photoURL2,
+            photoURL3,
+            photoURL4,
+            photoURL5,
+            microcenterLink,
+            amazonLink,
+            neweggLink,
+            bestbuyLink
+        } = req.body;
+    try {
+        await pool.query('INSERT INTO cpu (name, brand, description, socket, cores, threads, baseclock, boostclock, tdp, integratedgraphics, photourl1, photourl2, photourl3, photourl4, photourl5, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19)', 
+            [name, brand, description, socket, cores, threads, baseClock, boostClock, tdp, integratedGraphics, photoURL1, photoURL2, photoURL3, photoURL4, photoURL5, microcenterLink, amazonLink, neweggLink, bestbuyLink]);
+        res.status(200).send({message: "Succesfully added CPU to database"});
+    } catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
