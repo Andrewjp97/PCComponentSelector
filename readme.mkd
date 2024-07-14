@@ -1,0 +1,14 @@
+# PC Component Selector
+
+Welcome to PC Component Selector! This is a tool designed to help you choose the right components for your PC build. This is the backend of what will be a functional iOS application portfolio piece.
+
+## Features
+
+- Easy-to-use interface
+- Compatibility checker
+- Detailed component information
+- Price comparison
+
+## License
+
+This project is open source, and while no specific license has been selected, the author gives all rights for the reproduction and use of this code to anyone who would like them, without limitation, but accepts no liability for the use of this work.
