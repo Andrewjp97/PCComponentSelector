@@ -1,0 +1,62 @@
+###
+GET http://patersontech.duckdns.org:1338/motherboard/teardown
+
+###
+GET http://patersontech.duckdns.org:1338/motherboard/setup
+
+###
+GET http://patersontech.duckdns.org:1338/motherboard
+
+###
+POST http://patersontech.duckdns.org:1338/motherboard
+Content-Type: application/json
+
+{
+    "name": "ASUS ROG Crosshair VIII Dark Hero",
+    "brand": "ASUS",
+    "description": "Upgraded power delivery, passive chipset cooling, and stealthy aesthetics allow the Crosshair VIII Dark Hero to strike from the shadows and form a menacing duo with AMD Zen 3.",
+    "socket": "AM4",
+    "formFactor": "ATX",
+    "chipset": "AMD X570",
+    "memoryType": "DDR4",
+    "memorySlots": "4",
+    "pcieSlots": "1x16 or 2x8 full length slots, 1x4 full length slot, 1x1",
+    "sataPorts": "8",
+    "m2Slots": "2",
+    "photoURL1": "http://patersontech.duckdns.org:8043/images/00009.jpeg",
+    "photoURL2": "http://patersontech.duckdns.org:8043/images/0000A.jpeg",
+    "photoURL3": "http://patersontech.duckdns.org:8043/images/0000B.jpeg",
+    "photoURL4": "http://patersontech.duckdns.org:8043/images/0000C.jpeg",
+    "photoURL5": "http://patersontech.duckdns.org:8043/images/0000D.jpeg",
+    "microcenterLink": "",
+    "amazonLink": "https://www.amazon.com/ASUS-Crosshair-VIII-Dark-Hero/dp/B08MTKJ6HM/ref=sr_1_1?crid=1HRZTO6J5WLPL&dib=eyJ2IjoiMSJ9.X0kZjcVNEUJq8ZnLHzaonTvH4XEy6Bhd2xoIzKgWQTXd6i9FakpwScwsWaQnhH02Xh15z2nsWHp_cBbwyPxpFyFFwKWY3u-3F6M2nNqiTFZB9qLcyUT2NjFLDL77Z4XqfzKMSSA3o22TtmNp3K9iyzimchN4WyqFc-OFXG1chvcunjj0S1kkmwBtEseMO506QlymA0y3VFPkgvLD3vYxmEiy8sb4D6gaoW7AI2WmHZM.mAtTmyJDyfxFWfVAMS8gUhknpJ9FJGPmwVfwruA3JXg&dib_tag=se&keywords=ASUS+ROG+Crosshair+VIII+Dark+Hero+AM4+AMD+X570S+SATA+6Gb%2Fs+ATX+AMD+Motherboard&qid=1720975680&sprefix=asus+rog+crosshair+viii+dark+hero+am4+amd+x570s+sata+6gb%2Fs+atx+amd+motherboard%2Caps%2C169&sr=8-1",
+    "neweggLink": "https://www.newegg.com/asus-rog-crosshair-viii-dark-hero/p/N82E16813119362",
+    "bestbuyLink": ""
+}
+
+###
+POST http://patersontech.duckdns.org:1338/motherboard
+Content-Type: application/json
+
+{
+    "name": "MSI B650 GAMING PLUS WIFI",
+    "brand": "MSI",
+    "description": "Supports AMD Ryzen 7000 Series and Ryzen 9000 Series processors.\nBios update MAY required when used with 9000 Series processors.\nSupports DDR5 Memory, Dual Channel DDR5 6000+MHz (OC).\nEnhanced Power Design: 12+2+1 Duet Rail Power System, dual 8-pin CPU power connectors, Core Boost, Memory Boost.\nPremium Thermal Solution: Extended Heatsink, MOSFET thermal pads rated for 7W/mK, additional choke thermal pads and M.2 Shield Frozr are built for high performance system and non-stop work.\nLightning Fast Game experience: PCIe 4.0 slots, Lightning Gen 4 x4 M.2 with M.2 Shield Frozr, USB 3.2 Gen 2x2 20G.\n2.5G LAN with Wi-Fi 6E Solution: Upgraded network solution for professional and multimedia use. Delivers a secure, stable and fast network connection.\nHigh Quality PCB: 6-layer PCB made by 2oz thickened copper\nAudio Boost: Reward your ears with studio grade sound quality for the most immersive gaming experience",
+    "socket": "AM5",
+    "formFactor": "ATX",
+    "chipset": "AMD B650",
+    "memoryType": "DDR5",
+    "memorySlots": "4",
+    "pcieSlots": "1x16 and 1x4 full length slots, 1x1",
+    "sataPorts": "4",
+    "m2Slots": "2",
+    "photoURL1": "http://patersontech.duckdns.org:8043/images/0000E.jpeg",
+    "photoURL2": "http://patersontech.duckdns.org:8043/images/0000F.jpeg",
+    "photoURL3": "http://patersontech.duckdns.org:8043/images/0000G.jpeg",
+    "photoURL4": "http://patersontech.duckdns.org:8043/images/0000H.jpeg",
+    "photoURL5": "http://patersontech.duckdns.org:8043/images/0000I.jpeg",
+    "microcenterLink": "https://www.microcenter.com/product/670069/msi-b650-gaming-plus-wifi-amd-am5-atx-motherboard",
+    "amazonLink": "https://a.co/d/bZrox52",
+    "neweggLink": "https://newegg.io/nc4fb53957",
+    "bestbuyLink": ""
+}

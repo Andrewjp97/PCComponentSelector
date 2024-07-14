@@ -1,0 +1,55 @@
+###
+GET http://patersontech.duckdns.org:1338/ram/teardown
+
+###
+GET http://patersontech.duckdns.org:1338/ram/setup
+
+###
+GET http://patersontech.duckdns.org:1338/ram
+
+###
+POST http://patersontech.duckdns.org:1338/ram
+Content-Type: application/json
+
+{
+    "name": "G.Skill Trident Z5 Neo RGB 64GB (2 x 32GB) DDR5-6000 - Black",
+    "brand": "G.Skill",
+    "description": "Trident Z5 Neo RGB DDR5 memory is designed for ultra-high overclocked performance on DDR5-enabled AMD platforms. Featuring AMD EXPO overclocking technology for easy memory overclocking on supported AMD platforms, the Trident Z5 Neo RGB series is the ideal choice for building high-performance systems.",
+    "dims": "2",
+    "speed": "6000 MT/S",
+    "ddrClass": "DDR5",
+    "capacity": "64GB",
+    "photoURL1": "http://patersontech.duckdns.org:8043/images/00001.jpeg",
+    "photoURL2": "http://patersontech.duckdns.org:8043/images/00002.jpeg",
+    "photoURL3": "http://patersontech.duckdns.org:8043/images/00003.jpeg",
+    "photoURL4": "",
+    "photoURL5": "",
+    "microcenterLink": "https://www.microcenter.com/product/664697/gskill-trident-z5-neo-rgb-64gb-(2-x-32gb)-ddr5-6000-pc5-48000-cl30-dual-channel-desktop-memory-kit-f5-6000j3040g32gx2-tz5nr-black",
+    "amazonLink": "https://a.co/d/0slkfW9",
+    "neweggLink": "https://www.newegg.com/g-skill-64gb/p/N82E16820374445",
+    "bestbuyLink": ""
+}
+
+###
+POST http://patersontech.duckdns.org:1338/ram
+Content-Type: application/json
+
+{
+    "name": "G.Skill Flare X5 Series 32GB (2 x 16GB) DDR5-6000",
+    "brand": "G.Skill",
+    "description": "Designed for DDR5-enabled AMD AM5 platforms, Flare X5 series DDR5 memory is built for high performance in a low-profile design. Featuring AMD EXPO overclocking profiles for easy memory overclocking, users can easily enable overclocked performance by simply enabling EXPO in the BIOS on compatible systems.",
+    "dims": "2",
+    "speed": "6000 MT/S",
+    "ddrClass": "DDR5",
+    "capacity": "32GB",
+    "photoURL1": "http://patersontech.duckdns.org:8043/images/00004.jpeg",
+    "photoURL2": "http://patersontech.duckdns.org:8043/images/00005.jpeg",
+    "photoURL3": "http://patersontech.duckdns.org:8043/images/00006.jpeg",
+    "photoURL4": "http://patersontech.duckdns.org:8043/images/00007.jpeg",
+    "photoURL5": "http://patersontech.duckdns.org:8043/images/00008.jpeg",
+    "microcenterLink": "https://shorturl.at/cu8Bm",
+    "amazonLink": "https://a.co/d/aOhXTXS",
+    "neweggLink": "https://newegg.io/nc3fe90fee",
+    "bestbuyLink": ""
+}
+
