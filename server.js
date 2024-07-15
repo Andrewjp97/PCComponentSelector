@@ -5,6 +5,27 @@ const port = 1338;
 const app = express();
 app.use(express.json());
 
+app.get('/ram/setup', async (req, res) => {
+    try {
+        await pool.query('CREATE TABLE ram (id SERIAL PRIMARY KEY, title TEXT, brand TEXT, description TEXT, dims TEXT, speed TEXT, ddrClass TEXT, capacity TEXT, CASLatency TEXT, timing TEXT, rgb TEXT, model TEXT, voltage TEXT, ecc TEXT, color TEXT, bufferedOrRegistered TEXT, heatSpreader TEXT, photoURLS TEXT ARRAY, microcenterLink TEXT, amazonLink TEXT, neweggLink TEXT, bestbuyLink TEXT)');
+        res.status(200).send({message: "Succesfully created
+    } catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
+app.get('/ram/teardown', async (req, res) => {
+    try {
+        await pool.query('DROP TABLE ram');
+        res.status(200).send({message: "Succesfully dropped table"});
+    }
+    catch (err) {
+        console.error(err.message);
+        res.sendStatus(500);
+    }
+});
+
 app.get('/ram', async (req, res) => {
     try {
         const data = await pool.query('SELECT * FROM ram');
@@ -28,13 +49,22 @@ app.get('/ram/specific', async (req, res) => {
 });
 
 app.post('/ram', async (req, res) => {
-    const { name,
+    const { title,
             brand,
             description,
             dims,
             speed,
             ddrClass,
             capacity,
+            CASLatency,
+            timing,
+            rgb,
+            model,
+            voltage,
+            ecc,
+            color,
+            bufferedOrRegistered,
+            heatSpreader,
             photoURLS,
             microcenterLink,
             amazonLink,
@@ -42,31 +72,10 @@ app.post('/ram', async (req, res) => {
             bestbuyLink
         } = req.body;
     try {
-        await pool.query('INSERT INTO ram (name, brand, description, dims, speed, ddrclass, capacity, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)', 
-            [name, brand, description, dims, speed, ddrClass, capacity, photoURLS, microcenterLink, amazonLink, neweggLink, bestbuyLink]);
+        await pool.query('INSERT INTO ram (title, brand, description, dims, speed, ddrclass, capacity, caslatency, timing, rgb, model, voltage, ecc, color, bufferedorregistered, heatspreader, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)', 
+            [title, brand, description, dims, speed, ddrClass, capacity, CASLatency, timing, rgb, model, voltage, ecc, color, bufferedOrRegistered, heatSpreader, photoURLS, microcenterLink, amazonLink, neweggLink, bestbuyLink]);
         res.status(200).send({message: "Succesfully added RAM to database"});
     } catch (err) {
-        console.error(err.message);
-        res.sendStatus(500);
-    }
-});
-
-app.get('/ram/setup', async (req, res) => {
-    try {
-        await pool.query('CREATE TABLE ram (id SERIAL PRIMARY KEY, name VARCHAR(255), brand VARCHAR(255), description VARCHAR(2000), dims VARCHAR(255), speed VARCHAR(255), ddrclass VARCHAR(255), capacity VARCHAR(255), photourls TEXT ARRAY, microcenterlink VARCHAR(1000), amazonlink VARCHAR(1000), newegglink VARCHAR(1000), bestbuylink VARCHAR(1000))');
-        res.status(200).send({message: "Succesfully created table"});
-    } catch (err) {
-        console.error(err.message);
-        res.sendStatus(500);
-    }
-});
-
-app.get('/ram/teardown', async (req, res) => {
-    try {
-        await pool.query('DROP TABLE ram');
-        res.status(200).send({message: "Succesfully dropped table"});
-    }
-    catch (err) {
         console.error(err.message);
         res.sendStatus(500);
     }
