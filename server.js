@@ -83,7 +83,7 @@ app.post('/ram', async (req, res) => {
 
 app.get('/motherboard/setup', async (req, res) => {
     try {
-        await pool.query('CREATE TABLE motherboard (id SERIAL PRIMARY KEY, title TEXT, brand TEXT, description TEXT, platform TEXT, socket TEXT, chipset TEXT, dimms TEXT, maxsupportedmemory TEXT, pcie TEXT, sataports TEXT, m2ports TEXT, sataraid TEXT, lan TEXT, wifi TEXT, reario TEXT, otherconnectors TEXT, formfactor TEXT, dimensions TEXT, memorysupport TEXT, audio TEXT, internalusb TEXT, powerconnector TEXT, bluetooth TEXT, photourls TEXT ARRAY, microcenterlink TEXT, amazonlink TEXT, newegglink TEXT, bestbuylink TEXT)');
+        await pool.query('CREATE TABLE motherboard (id SERIAL PRIMARY KEY, title TEXT, brand TEXT, description TEXT, platform TEXT, socket TEXT, chipset TEXT, model TEXT, dimms TEXT, maxsupportedmemory TEXT, pcie TEXT, sataports TEXT, m2ports TEXT, sataraid TEXT, lan TEXT, wifi TEXT, reario TEXT, otherconnectors TEXT, formfactor TEXT, dimensions TEXT, memorysupport TEXT, audio TEXT, internalusb TEXT, powerconnector TEXT, bluetooth TEXT, photourls TEXT ARRAY, microcenterlink TEXT, amazonlink TEXT, newegglink TEXT, bestbuylink TEXT)');
         res.status(200).send({message: "Succesfully created motherboard table"});
     } catch (err) {
         console.error(err.message);
@@ -156,7 +156,7 @@ app.post('/motherboard', async (req, res) => {
         bestbuyLink
     } = req.body;
     try {
-        await pool.query('INSERT INTO motherboard (title , brand, description, platform, socket, chipset, dimms, maxsupportedmemory, pcie, sataports, m2ports, sataraid, lan, wifi, reario, otherconnectors, formfactor, dimensions, memorysupport, audio, internalusb, powerconnector, bluetooth, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29)', 
+        await pool.query('INSERT INTO motherboard (title , brand, description, platform, socket, chipset, model, dimms, maxsupportedmemory, pcie, sataports, m2ports, sataraid, lan, wifi, reario, otherconnectors, formfactor, dimensions, memorysupport, audio, internalusb, powerconnector, bluetooth, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29)', 
             [title, brand, description, platform, socket, chipset, model, dimms, maxSupportedMemory, pcie, sataPorts, m2Ports, sataRaid, lan, wifi, rearIO, otherConnectors, formFactor, dimensions, memorySupport, audio, internalUSB, powerConnector, bluetooth, photoURLS, microcenterLink, amazonLink, neweggLink, bestbuyLink]
         )
         res.status(200).send({message: "Succesfully added motherboard to database"});
