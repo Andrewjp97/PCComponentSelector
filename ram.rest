@@ -12,7 +12,7 @@ POST http://patersontech.duckdns.org:1338/ram
 Content-Type: application/json
 
 {
-    "name": "G.Skill Trident Z5 Neo RGB 64GB (2 x 32GB) DDR5-6000 - Black",
+    "title": "G.Skill Trident Z5 Neo RGB 64GB (2 x 32GB) DDR5-6000 - Black",
     "brand": "G.Skill",
     "description": "Trident Z5 Neo RGB DDR5 memory is designed for ultra-high overclocked performance on DDR5-enabled AMD platforms. Featuring AMD EXPO overclocking technology for easy memory overclocking on supported AMD platforms, the Trident Z5 Neo RGB series is the ideal choice for building high-performance systems.",
     "dims": "2",
@@ -42,7 +42,7 @@ POST http://patersontech.duckdns.org:1338/ram
 Content-Type: application/json
 
 {
-    "name": "G.Skill Flare X5 Series 32GB (2 x 16GB) DDR5-6000",
+    "title": "G.Skill Flare X5 Series 32GB (2 x 16GB) DDR5-6000",
     "brand": "G.Skill",
     "description": "Designed for DDR5-enabled AMD AM5 platforms, Flare X5 series DDR5 memory is built for high performance in a low-profile design. Featuring AMD EXPO overclocking profiles for easy memory overclocking, users can easily enable overclocked performance by simply enabling EXPO in the BIOS on compatible systems.",
     "dims": "2",

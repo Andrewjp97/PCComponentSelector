@@ -8,7 +8,7 @@ app.use(express.json());
 app.get('/ram/setup', async (req, res) => {
     try {
         await pool.query('CREATE TABLE ram (id SERIAL PRIMARY KEY, title TEXT, brand TEXT, description TEXT, dims TEXT, speed TEXT, ddrClass TEXT, capacity TEXT, CASLatency TEXT, timing TEXT, rgb TEXT, model TEXT, voltage TEXT, ecc TEXT, color TEXT, bufferedOrRegistered TEXT, heatSpreader TEXT, photoURLS TEXT ARRAY, microcenterLink TEXT, amazonLink TEXT, neweggLink TEXT, bestbuyLink TEXT)');
-        res.status(200).send({message: "Succesfully created
+        res.status(200).send({message: "Succesfully created RAM table"});
     } catch (err) {
         console.error(err.message);
         res.sendStatus(500);
@@ -72,7 +72,7 @@ app.post('/ram', async (req, res) => {
             bestbuyLink
         } = req.body;
     try {
-        await pool.query('INSERT INTO ram (title, brand, description, dims, speed, ddrclass, capacity, caslatency, timing, rgb, model, voltage, ecc, color, bufferedorregistered, heatspreader, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)', 
+        await pool.query('INSERT INTO ram (title, brand, description, dims, speed, ddrclass, capacity, caslatency, timing, rgb, model, voltage, ecc, color, bufferedorregistered, heatspreader, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)', 
             [title, brand, description, dims, speed, ddrClass, capacity, CASLatency, timing, rgb, model, voltage, ecc, color, bufferedOrRegistered, heatSpreader, photoURLS, microcenterLink, amazonLink, neweggLink, bestbuyLink]);
         res.status(200).send({message: "Succesfully added RAM to database"});
     } catch (err) {
