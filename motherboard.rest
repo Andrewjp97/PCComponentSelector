@@ -1,0 +1,148 @@
+###
+GET http://patersontech.duckdns.org:1338/motherboard/patersontech.duckdns.org:1338/motherboard/teardown
+
+###
+GET http://patersontech.duckdns.org:1338/motherboard/patersontech.duckdns.org:1338/motherboard/setup
+
+###
+GET http://patersontech.duckdns.org:1338/motherboard/patersontech.duckdns.org:1338/motherboard
+
+###
+POST http://patersontech.duckdns.org:1338/motherboard/patersontech.duckdns.org:1338/motherboard
+Content-Type: application/json
+
+{
+        "title": "ASRock B660M PRO RS",
+        "brand": "ASRock",
+        "description": "Modern and futuristic, with the attractive specifications and perfect balance, the Race Sport (RS) Edition is the evolution of the most popular PRO series motherboard. Its unique path takes aim at mainstream DIYers that drives an undeniable performance and trustable computing experience without a pricey upgrade. RaceSport edition, your all-rounder motherboard that fulfills every task and light-loading gaming — with style and speed!",
+        "platform": "Intel 12th and 13th Gen",
+        "socket": "LGA 1700",
+        "chipset": "B660",
+        "model": "B660M PRO RS",
+        "dimms": "4",
+        "maxSupportedMemory": "128GB",
+        "pcie": "1 x PCIe 5.0 x16,
+                 1 x PCIe 4.0 x16, 
+                 1 x PCIe 3.0 x1",
+        "sataPorts": "4",
+        "m2Ports": "1 x PCIE Gen4 x4,
+                     1 x PCIE Gen3 x4",
+        "sataRaid": "0, 1, 5, 10",
+        "lan": "Gigabit LAN",
+        "wifi": "1 x M.2 Socket (Key E), supports type 2230 WiFi/BT PCIe WiFi module and Intel CNVi (Integrated WiFi/BT)",
+        "rearIO": "1 x PS/2 Mouse/Keyboard Port, 
+                    1 x HDMI Port, 1 x DisplayPort 1.4, 
+                    4 x USB 3.2 Gen1 Ports (ASMedia ASM1074 hub) (Supports ESD Protection), 
+                    2 x USB 2.0 Ports (Supports ESD Protection), 
+                    1 x RJ-45 LAN Port with LED (ACT/LINK LED and SPEED LED), 
+                    HD Audio Jacks: Line in / Front Speaker / Microphone",
+        "otherConnectors": "1 x SPI TPM Header
+                            1 x Chassis Intrusion and Speaker Header
+                            1 x RGB LED Header
+                            * Supports in total up to 12V/3A, 36W LED Strip.
+                            3 x Addressable LED Headers
+                            * Support in total up to 5V/3A, 15W LED Strip.
+                            1 x CPU Fan Connector (4-pin)
+                            * The CPU Fan Connector supports the CPU fan of maximum 1A (12W) fan power.
+                            1 x CPU/Water Pump Fan Connector (4-pin) (Smart Fan Speed Control)
+                            * The CPU/Water Pump Fan supports the water cooler fan of maximum 2A (24W) fan power.
+                            3 x Chassis/Water Pump Fan Connectors (4-pin) (Smart Fan Speed Control)
+                            * The Chassis/Water Pump Fan supports the water cooler fan of maximum 2A (24W) fan power.
+                            * CPU_FAN2/WP, CHA_FAN1~3/WP can auto detect if 3-pin or 4-pin fan is in use.
+                            1 x Front Panel Audio Connector
+                            1 x Thunderbolt AIC Connector (5-pin) (Supports ASRock Thunderbolt 4 AIC Card)",
+        "formFactor": "Micro ATX",
+        "dimensions": "9.6 x 9.6 in",
+        "memorySupport": "DDR4 up to 4800 MT/s non-ECC, un-buffered memory",
+        "audio": "7.1 CH HD Audio (Realtek ALC897 Audio Codec)",
+        "internalUSB": "1 x USB 3.2 Gen2 Type-C (10 Gb/s) (Supports ESD Protection)
+                        1 x USB 3.2 Gen2 Type-A (10 Gb/s) (Supports ESD Protection)
+                        2 x USB 3.2 Gen1 (5 Gb/s) (Supports ESD Protection)
+                        2 x USB 2.0 (Supports ESD Protection)",
+        "powerConnector": "1 x 24-pin ATX Power Connector
+                            1 x 8-pin 12V Power Connector
+                            1 x 4-pin 12V Power Connector",
+        "bluetooth": "No integrated Bluetooth",
+        "photoURLS": ["http://patersontech.duckdns.org:8043/images/00011.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00012.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00013.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00014.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00015.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00016.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00017.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00018.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/00019.jpeg"],
+        "microcenterLink": "https://www.microcenter.com/product/670068/asrock-b660m-pro-rs-intel-lga-1700-microatx-motherboard",
+        "amazonLink": "https://www.amazon.com/dp/B09NZPD6WD?ref_=cm_sw_r_cp_ud_dp_DDDT7WVZN1BEKCFDJ8RZ",
+        "neweggLink": "https://www.newegg.com/p/N82E16813162048?Item=N82E16813162048",
+        "bestbuyLink": ""
+}
+
+###
+POST http://patersontech.duckdns.org:1338/motherboard/patersontech.duckdns.org:1338/motherboard
+Content-Type: application/json
+
+{
+        "title": "GIGABYTE B760M GAMING PLUS WIFI",
+        "brand": "GIGABYTE",
+        "description": "Supports Intel® Core™ 14th/ 13th /12th processors
+                        Unparalleled Performance:Hybrid 4+1+1 Phases Digital VRM Solution
+                        Dual Channel DDR4:4*DIMMs XMP Memory Module Support
+                        Next Generation Storage:2*PCIe 4.0 x4 M.2 Connectors
+                        Fast Networks:Wi-Fi 6 802.11ax, GbE LAN
+                        Extended Connectivity:Front USB-C® 5Gb/s, DP, HDMI
+                        Smart Fan 6:Features Multiple Temperature Sensors, Hybrid Fan Headers with FAN STOP
+                        Q-Flash Plus:Update BIOS Without Installing the CPU, Memory and Graphics Card",
+        "platform": "Intel 13th and 14th Gen",
+        "socket": "LGA 1700",
+        "chipset": "B760",
+        "model": "B760M GAMING PLUS WIFI DDR4",
+        "dimms": "4",
+        "maxSupportedMemory": "128GB",
+        "pcie": "1 x16 at PCIE Gen 4, 2 x1 at PCIE Gen 3",
+        "sataPorts": "4",
+        "m2Ports": "2 M.2 slots at PCIE Gen 4x4/x2",
+        "sataRaid": "RAID 0, 1 ,5, 10",
+        "lan": "Gigabit Ethernet",
+        "wifi": "WiFi 802.11ax",
+        "rearIO": "2 x USB 2.0/1.1 ports
+                    1 x PS/2 keyboard/mouse port
+                    2 x SMA antenna connectors (2T2R)
+                    1 x DisplayPort 
+                    1 x HDMI port
+                    3 x USB 3.2 Gen 1 ports
+                    1 x RJ-45 port
+                    3 x audio jacks",
+        "otherConnectors": "1 x CPU fan header
+                            3 x system fan headers
+                            1 x addressable LED strip header
+                            1 x RGB LED strip header
+                            1 x front panel header
+                            1 x front panel audio header
+                            1 x Trusted Platform Module header (For the GC-TPM2.0 SPI/GC-TPM2.0 SPI 2.0 / GC-TPM2.0 SPI V2 module only)
+                            1 x serial port header
+                            1 x parallel port header
+                            1 x S/PDIF Out header
+                            1 x Q-Flash Plus button
+                            1 x reset jumper
+                            1 x Clear CMOS jumper",
+        "formFactor": "Micro ATX",
+        "dimensions": "9.6\" x 9.6\"",
+        "memorySupport": "DDR4 up to 5333 MT/s",
+        "audio": "7.1 Channels",
+        "internalUSB": "1 x USB Type-C header, with USB 3.2 Gen 1 support
+                        1 x USB 3.2 Gen 1 header
+                        2 x USB 2.0/1.1 headers",
+        "powerConnector": "1 x 24-pin ATX main power connector
+                            1 x 8-pin ATX 12V power connector",
+        "bluetooth": "Bluetooth 5.3",
+        "photoURLS": ["http://patersontech.duckdns.org:8043/images/0001A.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/0001B.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/0001C.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/0001D.jpeg",
+                      "http://patersontech.duckdns.org:8043/images/0001E.jpeg"],
+        "microcenterLink": "",
+        "amazonLink": "https://a.co/d/68CJnfE",
+        "neweggLink": "https://www.newegg.com/p/N82E16813162048?Item=N82E16813162048",
+        "bestbuyLink": ""
+}
