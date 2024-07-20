@@ -238,7 +238,7 @@ app.post('/cpu', async (req, res) => {
         bestbuyLink
     } =  req.body;
     try {
-        await pool.query('INSERT INTO cpu (title, brand, description, model, socket, cores, threads, baseclock, boostclock, l1cache, l2cache, l3cache, manufacturingprocess, memorysupport, eccsupport, integratedgraphics, memorychannels, graphicsbasefrequency, graphicsboostfrequency, tdp, thermalsolution, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25)',
+        await pool.query('INSERT INTO cpu (title, brand, description, model, socket, cores, threads, baseclock, boostclock, l1cache, l2cache, l3cache, manufacturingprocess, memorysupport, eccsupport, integratedgraphics, memorychannels, graphicsbasefrequency, graphicsboostfrequency, tdp, thermalsolution, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26)',
             [title, brand, description, model, socket, cores, threads, baseClock, boostClock, l1Cache, l2Cache, l3Cache, manufacturingProcess, memorySupport, eccSupport, integratedGraphics, memoryChannels, graphicsBaseFrequency, graphicsBoostFrequency, tdp, thermalSolution, photourls, microcenterLink, amazonLink, neweggLink, bestbuyLink]
         )
         res.status(200).send({message: "Succesfully added CPU to database"});
