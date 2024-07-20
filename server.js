@@ -166,6 +166,88 @@ app.post('/motherboard', async (req, res) => {
     }
 });
 
+app.get('/cpu/setup', async (req, res) => {
+    try {
+        await pool.query('CREATE TABLE cpu (id SERIAL PRIMARY KEY, title TEXT, brand TEXT, description TEXT, model TEXT, socket TEXT, cores TEXT, threads TEXT, baseClock TEXT, boostClock TEXT, l1Cache TEXT, l2Cache TEXT, l3Cache TEXT, manufacturingProcess TEXT, memorySupport TEXT, eccSupport TEXT, integratedGraphics TEXT, memoryChannels TEXT, graphicsBaseFrequency TEXT, graphicsBoostFrequency TEXT, tdp TEXT, thermalSolution TEXT, photoURLS TEXT ARRAY, microcenterLink TEXT, amazonLink TEXT, neweggLink TEXT, bestbuyLink TEXT)');
+        res.status(200).send({message: "Succesfully created CPU table"});
+    } catch (err) {
+        console.error(err.message)
+        res.sendStatus(500)
+    }
+});
+
+app.get('/cpu/teardown', async (req, res) => {
+    try {
+        await pool.query('DROP TABLE cpu');
+        res.status(200).send({message: "Succesfully dropped table"});
+    } catch (err) {
+        console.error(err.message)
+        res.sendStatus(500)
+    }
+});
+
+app.get('/cpu', async (req, res) => {
+    try {
+        const data = await pool.query('SELECT * FROM cpu');
+        res.status(200).send(data.rows);
+    } catch (err) {
+        console.error(err.message)
+        res.sendStatus(500)
+    }
+});
+
+app.get('/cpu/specific', async (req, res) => {
+    const id = req.query.id;
+    console.log(id);
+    try {
+        const data = await pool.query('SELECT * FROM cpu WHERE id = $1', [id]);
+        res.status(200).send(data.rows);
+    } catch (err) {
+        console.error(err.message)
+        res.sendStatus(500)
+    }
+});
+
+app.post('/cpu', async (req, res) => {
+    const {
+        title,
+        brand,
+        description,
+        model,
+        socket,
+        cores,
+        threads,
+        baseClock,
+        boostClock,
+        l1Cache,
+        l2Cache,
+        l3Cache,
+        manufacturingProcess,
+        memorySupport,
+        eccSupport,
+        integratedGraphics,
+        memoryChannels,
+        graphicsBaseFrequency,
+        graphicsBoostFrequency,
+        tdp,
+        thermalSolution,
+        photourls,
+        microcenterLink,
+        amazonLink,
+        neweggLink,
+        bestbuyLink
+    } =  req.body;
+    try {
+        await pool.query('INSERT INTO cpu (title, brand, description, model, socket, cores, threads, baseclock, boostclock, l1cache, l2cache, l3cache, manufacturingprocess, memorysupport, eccsupport, integratedgraphics, memorychannels, graphicsbasefrequency, graphicsboostfrequency, tdp, thermalsolution, photourls, microcenterlink, amazonlink, newegglink, bestbuylink) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25)',
+            [title, brand, description, model, socket, cores, threads, baseClock, boostClock, l1Cache, l2Cache, l3Cache, manufacturingProcess, memorySupport, eccSupport, integratedGraphics, memoryChannels, graphicsBaseFrequency, graphicsBoostFrequency, tdp, thermalSolution, photourls, microcenterLink, amazonLink, neweggLink, bestbuyLink]
+        )
+        res.status(200).send({message: "Succesfully added CPU to database"});
+    } catch (err) {
+        console.error(err.message)
+        res.sendStatus(500)
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });

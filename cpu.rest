@@ -1,0 +1,74 @@
+###
+GET http://patersontech.duckdns.org:1338/cpu/teardown
+
+###
+GET http://patersontech.duckdns.org:1338/cpu/setup
+
+###
+GET http://patersontech.duckdns.org:1338/cpu
+
+###
+POST http://patersontech.duckdns.org:1338/cpu
+Content-Type: application/json
+
+{
+    "title": "AMD Ryzen 5 7600",
+    "brand": "AMD",
+    "description": "Overclock at an incredible value with AMD Ryzen™ 5 7600 processors1. AMD Ryzen™ 5 7600 processor is built to help you beat the clock with time-saving connectivity like PCIe® 5.0, 6 cores/12 processing threads, and dedicated video accelerators.",
+    "model": "100-100001015BOX",
+    "socket": "AM5",
+    "cores": "6",
+    "threads": "12",
+    "baseClock": "3.8 GHz",
+    "boostClock": "Up to 5.1GHz",
+    "l1Cache": "384KB",
+    "l2Cache": "6MB",
+    "l3Cache": "32MB",
+    "manufacturingProcess": "5nm",
+    "memorySupport": "DDR5 5200 MT/s",
+    "eccSupport": "No",
+    "integratedGraphics": "AMD Radeon Graphics",
+    "memoryChannels": "2",
+    "graphicsBaseFrequency": "400 MHz",
+    "graphicsBoostFrequency": "2.2 GHz",
+    "tdp": "65W",
+    "thermalSolution": "Wraith Stealth Cooler",
+    "photourls": ["http://patersontech.duckdns.org:8043/images/0001F.jpeg", "http://patersontech.duckdns.org:8043/images/0001G.jpeg", "http://patersontech.duckdns.org:8043/images/0001H.jpeg"],
+    "microcenterLink": "https://www.microcenter.com/product/674517/amd-ryzen-5-7600-raphael-am5-38ghz-6-core-boxed-processor-wraith-stealth-cooler-included",
+    "amazonLink": "https://a.co/d/gytq568",
+    "neweggLink": "https://www.newegg.com/amd-ryzen-5-7600/p/N82E16819113787?Item=N82E16819113787",
+    "bestbuyLink": ""
+}
+
+###
+POST http://patersontech.duckdns.org:1338/cpu
+Content-Type: application/json
+
+{
+    "title": "Intel Core i7-14700K",
+    "brand": "Intel",
+    "description": "This new generation of processors continue to utilize Intel\'s performance hybrid architecture to optimize your gaming, content creation, and productivity. Take advantage of platform innovation designed for delivering flexibility and supercharge your CPU performance with a powerful suite of tuning and overclocking tools. Support for the Intel® 700 series chipsets and backwards compatibility with the Intel® 600 series chipsets allow you to access the features you need for any task. Whether you are working, streaming, gaming, or creating, Intel® Core desktop processors deliver the ultimate immersive experience.",
+    "model": "BX8071514700K",
+    "socket": "LGA 1700",
+    "cores": "20 (8P+12E)",
+    "threads": "28",
+    "baseClock": "Performance-core Base Frequency: 3.4 GHz\nEfficient-core Base Frequency: 2.5 GHz",
+    "boostClock": "	Intel Turbo Boost Max Technology 3.0 Frequency: Up to 5.6 GHz\nP-core Max Turbo Frequency: Up to 5.5 GHz\nE-core Max Turbo Frequency: Up to 4.3 GHz",
+    "l1Cache": "",
+    "l2Cache": "28MB",
+    "l3Cache": "33MB",
+    "manufacturingProcess": "Intel 7",
+    "memorySupport": "DDR4 3200 MT/s / DDR5 5600 MT/s",
+    "eccSupport": "Supported",
+    "integratedGraphics": "Intel UHD Graphics 770",
+    "memoryChannels": "2",
+    "graphicsBaseFrequency": "300 MHz",
+    "graphicsBoostFrequency": "1.6 GHz",
+    "tdp": "125W (Max Turbo 253W)",
+    "thermalSolution": "None Included",
+    "photourls": ["http://patersontech.duckdns.org:8043/images/0001I.jpeg", "http://patersontech.duckdns.org:8043/images/0001J.jpeg", "http://patersontech.duckdns.org:8043/images/0001K.jpeg],
+    "microcenterLink": "https://www.microcenter.com/product/670842/intel-core-i7-14700k-raptor-lake-34ghz-twenty-core-lga-1700-boxed-processor-heatsink-not-included",
+    "amazonLink": "https://a.co/d/5waY1ow",
+    "neweggLink": "https://www.newegg.com/intel-core-i7-14700k-core-i7-14th-gen/p/N82E16819118466",
+    "bestbuyLink": "https://www.bestbuy.com/site/intel-core-i7-14700k-14th-gen-20-core-28-thread-4-3ghz-5-6ghz-turbo-socket-lga-1700-unlocked-desktop-processor-multi/6560420.p?skuId=6560420"
+}
